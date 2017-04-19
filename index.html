@@ -1,0 +1,46 @@
+
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"  crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.backand.net/vanilla-sdk/1.1.0/backand.min.js"> </script>
+    <script src="scripts/app.js"> </script>
+  </head>
+  <body>
+    <h1 align="center"> To Do List </h1>
+    <div>
+      <button id="openFile" class="btn btn-primary">Open</button>
+      <input id="file-input" type="file" name="name" style="display: none;" />
+    </div>
+    <hr />
+    <div class="form-inline" id="login-form">
+      <label class="sr-only" for="usernameInput">Username</label>
+      <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="usernameInput" placeholder="Username">
+
+      <label class="sr-only" for="password">Password</label>
+      <input type="password" class="form-control mb-2 mr-sm-2 mb-sm-0" id="password" placeholder="Password">
+      <div id="loginButton">
+        <button  class="btn btn-primary btn-success" id="loginButton">Log In</button>
+      </div>
+    </div>
+    <div id="logged-in-alert" hidden>
+      <span id="logged-in-message"> You are currently logged in as USER_NAME </span>
+    </div>
+    <hr />
+    <form class="form-inline" id="create-form">
+      <label class="sr-only" for="nameInput">Name</label>
+      <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="nameInput" placeholder="Name">
+
+      <label class="sr-only" for="descriptionInput">Description</label>
+      <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="descriptionInput" placeholder="Description">
+      <div id="createItem">
+        <button  class="btn btn-primary" id="createItemButton">Create</button>
+      </div>
+    </form>
+    <hr />
+    <div class="list-group" id="itemList">
+
+    </div>
+  </body>
+</html>
